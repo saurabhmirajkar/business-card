@@ -28,6 +28,7 @@ struct ContentView: View {
                     .foregroundStyle(.white)
                 Divider()
                 InfoView(text: "+1-9876-54321", imageName: "phone.fill")
+                InfoView(text: "saurabh@email.com", imageName: "envelope.fill")
             }
         }
     }
@@ -35,20 +36,4 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
-}
-
-struct InfoView: View {
-    let text: String
-    let imageName: String
-    
-    var body: some View {
-        RoundedRectangle(cornerRadius: 25)
-            .foregroundStyle(.white)
-            .frame(height: 50)
-            .overlay(HStack {
-                Image(systemName: imageName).foregroundStyle( Color(red: 0.09, green: 0.63, blue: 0.52, opacity: 1.00))
-                Text(text)
-            })
-            .padding(.all)
-    }
 }
